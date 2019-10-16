@@ -1,0 +1,29 @@
+<div class="loginHome">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+  
+      <div class="fadeIn first">
+          <br><br>
+        <img src="https://www.primevisaexperts.com//assets/img/admin.png" id="icon" alt="User Icon" />
+        <br>
+      </div>
+      <br><br>
+  
+      <form [formGroup] = "signupForm" (ngSubmit)="onSubmit(signupForm)"> 
+        
+        <input type="text" id="username" class="fadeIn second" formControlName="username" placeholder="Username">
+        
+        
+        <input type="password" id="password" class="fadeIn third" formControlName="password" placeholder="password">
+      
+        <br>
+
+          <p *ngIf="loginErr == true" class="worngErr">PLease enter correct credentials</p> <br>
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+      <br>
+  
+    </div>
+  </div>
+
+</div>

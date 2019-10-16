@@ -1,0 +1,29 @@
+select{
+    width: 200px;
+    height: 30px;
+    background-color: white
+}
+.savebtn{
+        background-color: green;
+        color: white;
+        height: 40px;
+        border: 1px solid darkolivegreen;
+        width: 90px
+}
+.updatebtn{
+    background-color: orange;
+    color: white;
+    height: 40px;
+    border: 1px solid darkorange;
+    width: 90px
+}
+.formMain{
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    top: 250px;
+    left: 37vw;
+}
+input{
+    width: 200px;
+}

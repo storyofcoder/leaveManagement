@@ -1,0 +1,33 @@
+<div class="formMain">
+        <form [formGroup] = "leaveForm" (ngSubmit)="onSubmit(leaveForm)"> 
+                <div class="first">
+                        <label>StartDate </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="date" formControlName="startdate" [value]="StartDate">
+                </div><br>
+                <div class="second">
+                        <label>EndDate </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="date" formControlName="enddate" [value]="EndDate"> 
+                </div><br>
+                <div class="third">
+                        <label>LeaveType</label> &nbsp;&nbsp;
+                        <select id="inputState" formControlName="leaveType" [value]="LeaveType"> 
+                                <option value="maternal">maternal</option>
+                                <option value="paternal">paternal</option>
+                                <option value="sick leave">sick leave</option>
+                                <option value="urgent">urgent</option>
+                              </select>
+                        
+                </div><br>
+                <div class="fourth"> 
+                        <label>Purpose</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" formControlName="purpose" [value]="Purpose">
+                        
+                </div><br>
+                <div  class="btn1" *ngIf="!buttonStatus">
+                        <button (click)="onClick()" class="savebtn">SAVE</button>
+                </div>
+                <div class="btn2" *ngIf="buttonStatus">
+                        <button (click)="updateData()" class="updatebtn">Update</button>
+                </div>
+        </form>        
+</div>
